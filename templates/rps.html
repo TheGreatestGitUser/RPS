@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Rock Paper Scissors</title>
+
+</head>
+
+<body>
+  <div>
+        You played:
+        {% if move == 0 %}
+        rock
+        {% elif move == 1 %}
+        scissors
+        {% else %}
+        paper
+        {% endif %}
+    </div>
+    <div>
+        Server played:
+        {% if server_move == 0 %}
+        rock
+        {% elif server_move == 1 %}
+        scissors
+        {% else %}
+        paper
+        {% endif %}
+    </div>
+    <div>
+        {% if result == None %}
+        draw!
+        {% elif result %}
+        you won!
+        {% else %}
+        you LOST!
+        {% endif %}
+    </div>
+    <a href="/">Return</a>
+</body>
+</html>
